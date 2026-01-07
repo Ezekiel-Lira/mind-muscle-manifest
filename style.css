@@ -131,5 +131,11 @@ body {
     padding-top: 92px;
   }
 }
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 18px 80px;
+}
+
 
 
