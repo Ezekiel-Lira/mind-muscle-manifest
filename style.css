@@ -111,6 +111,21 @@ body {
 .nav-ghost {
   opacity: 0.75;
 }
+/* Mobile: make nav less intrusive */
+@media (max-width: 520px) {
+  .top-nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    border-radius: 0;
+    justify-content: space-around;
+  }
+
+  .has-top-nav {
+    padding-top: 0; /* sticky nav already takes space */
+  }
 
 /* Mobile: make it fit without covering the page */
 @media (max-width: 520px) {
