@@ -189,5 +189,9 @@ p {
     padding: 7px 8px;
   }
   section { margin-top: 34px; }
-
+@media (max-width: 520px) {
+  .success-page {
+    padding-top: 56px;
+  }
 }
+
