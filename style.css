@@ -350,5 +350,48 @@ section h3::after {
 .fit-section {
   margin-top: 40px;
   }
+    .services-hero {
+  padding-top: 28px;
+  margin-bottom: 28px;
+}
+
+.services-hero h1 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  margin-bottom: 12px;
+}
+
+.services-hero .subtext {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+section {
+  margin-top: 42px;
+}
+
+section h3::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin: 10px auto 0;
+  background: #b31217;
+  border-radius: 999px;
+}
+
+.price-list {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #1a1a1a;
+}
+
+.price-list p {
+  margin: 6px 0;
+  color: #bdbdbd;
+}
+
+.fit-section {
+  margin-top: 48px;
+}
 }
 
