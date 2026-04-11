@@ -322,5 +322,55 @@ section h3::after {
   .site-logo {
     margin-top: 18px;
     margin-bottom: 24px;
+  @media (max-width: 640px) {
+  body.has-top-nav {
+    padding-top: 0;
+  }
+
+  .top-nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0;
+    justify-content: space-around;
+    padding: 8px 6px;
+    margin: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .nav-link {
+    font-size: 0.82rem;
+    padding: 8px 6px;
+  }
+
+  .page {
+    padding: 18px 14px 90px;
+  }
+
+  .site-logo {
+    max-width: 120px;
+    margin-top: 18px;
+    margin-bottom: 24px;
+  }
+
+  .services-hero {
+    padding-top: 22px;
+    margin-bottom: 22px;
+  }
+
+  section {
+    margin-top: 42px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .success-page {
+    padding-top: 56px;
   }
 }
