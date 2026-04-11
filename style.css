@@ -501,7 +501,23 @@ section h3::after {
   .card {
     padding: 18px;
   }
+.label {
+  background: rgba(179, 18, 23, 0.12);
+  border: 1px solid rgba(179, 18, 23, 0.24);
+  color: #f5f5f5;
 }
+
+.btn {
+  background: #b31217;
+  border: 1px solid transparent;
 }
+
+.btn:hover {
+  background: #981015;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #333;
 }
 
