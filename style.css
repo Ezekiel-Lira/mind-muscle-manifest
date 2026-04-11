@@ -396,5 +396,25 @@ section h3::after {
 
   header {
     padding-top: 12px;
+  /* Homepage CTA spacing */
+.cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+@media (max-width: 640px) {
+  .cta-group {
+    gap: 16px;
+    margin-top: 32px;
+    margin-bottom: 10px;
+  }
+
+  .cta-group .btn,
+  .cta-group .btn-outline,
+  .cta-group .cta-button {
+    min-width: 180px;
   }
 }
