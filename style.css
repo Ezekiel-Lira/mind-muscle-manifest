@@ -532,7 +532,6 @@ section h3::after {
     width: min(280px, 88vw);
     text-align: center;
   }
-}
 
   .price-list p {
     font-size: 0.98rem;
@@ -602,5 +601,22 @@ section h3::after {
   .card p,
   .card li {
     font-size: 0.98rem;
+  }
+    
+  @media (max-width: 640px) {
+  .cta-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin-top: 34px;
+    margin-bottom: 14px;
+  }
+
+  .cta-group .btn,
+  .cta-group .btn-outline,
+  .cta-group .cta-button {
+    width: min(280px, 88vw);
+    text-align: center;
   }
 }
