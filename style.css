@@ -470,4 +470,40 @@ section h3::after {
 
 .faq-item.open .faq-answer {
   display: block;
+/* Services mobile layout improvement */
+@media (max-width: 640px) {
+  .page {
+    max-width: 100%;
+    padding: 20px 12px 90px;
+  }
+
+  .services-hero h1 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  .services-hero .subtext {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px;
+  }
+
+  .card p,
+  .card li {
+    font-size: 0.98rem;
+  }
+
+  .price-list p {
+    font-size: 0.98rem;
+  }
 }
