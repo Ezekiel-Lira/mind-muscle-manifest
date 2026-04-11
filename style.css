@@ -311,5 +311,16 @@ section h3::after {
 
   .success-page {
     padding-top: 56px;
+  /* Mobile spacing between nav and hero/logo */
+@media (max-width: 640px) {
+  .hero-logo-wrap,
+  .hero-content,
+  header {
+    margin-top: 18px;
+  }
+
+  .site-logo {
+    margin-top: 18px;
+    margin-bottom: 24px;
   }
 }
