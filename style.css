@@ -1,200 +1,7 @@
-/* ===== Global Base Theme (all pages) ===== */
-html, body {
-  margin: 0;
-  padding: 0;
-  background: #050505;
-  color: #f5f5f5;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  text-align: center;
-}
-
-.page {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 24px 18px 80px;
-}
-
-h1, h2, h3, h4 {
-  margin: 0 0 10px 0;
-}
-
-p {
-  margin: 10px 0;
-}
-
-.subtext {
-  text-align: center;
-  margin: 0 auto;
-  max-width: 820px;
-  opacity: 0.92;
-}
-
-/* ===== Logo ===== */
-.site-logo {
-  display: block;
-  max-width: 140px;
-  margin: 0 auto 24px auto;
-  opacity: 0.95;
-}
-
-/* ===== Buttons ===== */
-.cta-button {
-  display: inline-block;
-  margin-top: 26px;
-  padding: 16px 32px;
-  background: #000;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  letter-spacing: 1px;
-  border-radius: 8px;
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.cta-button:hover {
-  background: #222;
-  transform: translateY(-2px);
-}
-
-/* If your site uses .btn / .btn-outline, these help match the look */
-.btn {
-  display: inline-block;
-  padding: 12px 18px;
-  border-radius: 10px;
-  background: #000;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  border: 1px solid #222;
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.btn:hover {
-  background: #1a1a1a;
-  transform: translateY(-2px);
-}
-
-.btn-outline {
-  background: transparent;
-  border: 1px solid #2a2a2a;
-}
-
-/* ===== Cards (matches main aesthetic) ===== */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 18px;
-}
-
-.card {
-  text-align: left;
-  border: 1px solid #222;
-  border-radius: 16px;
-  background: #080808;
-  padding: 18px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-}
-
-.label {
-  display: inline-block;
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  opacity: 0.85;
-  margin-bottom: 10px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid #222;
-  background: rgba(255,255,255,0.03);
-}
-
-.card ul {
-  margin: 10px 0 0 18px;
-  padding: 0;
-}
-
-.card li {
-  margin: 6px 0;
-  opacity: 0.92;
-}
-
-/* ===== Floating / Sticky Nav ===== */
-.has-top-nav {
-  padding-top: 84px; /* space so fixed nav doesn't cover content */
-}
-
-.top-nav {
-  position: fixed;
-  top: 12px;
-  right: 12px;
-  z-index: 9999;
-  display: flex;
-  gap: 8px;
-  padding: 10px 12px;
-  border: 1px solid #222;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.72);
-  backdrop-filter: blur(10px);
-}
-
-.nav-link {
-  color: #f5f5f5;
-  text-decoration: none;
-  font-size: 0.9rem;
-  padding: 8px 10px;
-  border-radius: 999px;
-  border: 1px solid transparent;
-  white-space: nowrap;
-}
-
-.nav-link:hover {
-  border: 1px solid #2a2a2a;
-}
-
-.nav-link.active {
-  border: 1px solid #3a3a3a;
-}
-
-.nav-ghost {
-  opacity: 0.75;
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 920px) {
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
-  .card {
-    text-align: left;
-  }
-}
-
-@media (max-width: 520px) {
-  .top-nav {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    border-radius: 0;
-    justify-content: space-around;
-  }
-
-  .has-top-nav {
-    padding-top: 0; /* sticky nav already takes space */
-  }
-
-  .nav-link {
-    font-size: 0.82rem;
-    padding: 7px 8px;
-  }
-  section { margin-top: 34px; }
-@media (max-width: 520px) {
-  .success-page {
-    padding-top: 56px;
-    :root {
+:root {
   --bg: #050505;
   --panel: #0b0b0b;
+  --panel-2: #080808;
   --border: #222;
   --text: #f5f5f5;
   --muted: #bdbdbd;
@@ -202,94 +9,59 @@ p {
   --accent-soft: rgba(179, 18, 23, 0.12);
 }
 
-html, body {
+html,
+body {
+  margin: 0;
+  padding: 0;
   background: var(--bg);
   color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  text-align: center;
 }
 
-/* Page wrapper */
+body.has-top-nav {
+  padding-top: 96px;
+}
+
 .page {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 36px 18px 88px;
+  padding: 24px 18px 100px;
 }
 
-/* Services page hero spacing */
-.services-hero {
-  padding-top: 26px;
-  margin-bottom: 26px;
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 10px 0;
 }
 
-.services-hero h1 {
-  font-size: clamp(2rem, 5vw, 3.4rem);
-  margin-bottom: 12px;
+p {
+  margin: 10px 0;
 }
 
-.services-hero .subtext {
+section {
+  margin-top: 56px;
+}
+
+section:first-of-type {
+  margin-top: 20px;
+}
+
+.subtext {
   max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--muted);
+  line-height: 1.6;
 }
 
-/* Accent headings */
-section h3 {
-  color: var(--text);
-  margin-bottom: 10px;
-  position: relative;
-}
-
-section h3::after {
-  content: "";
+/* Logo */
+.site-logo {
   display: block;
-  width: 64px;
-  height: 3px;
-  margin: 10px auto 0;
-  background: var(--accent);
-  border-radius: 999px;
-}
-
-/* Cards */
-.card {
-  text-align: left;
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  background: linear-gradient(180deg, var(--panel), #080808);
-  padding: 20px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.24);
-}
-
-.label {
-  display: inline-block;
-  font-size: 0.76rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #fff;
-  margin-bottom: 10px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.06);
-  background: var(--accent-soft);
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 12px 18px;
-  border-radius: 10px;
-  background: var(--accent);
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  border: 1px solid transparent;
-  transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  opacity: 0.96;
-}
-
-.btn-outline {
-  background: transparent;
-  border: 1px solid #3a3a3a;
+  max-width: 140px;
+  margin: 0 auto 24px auto;
+  opacity: 0.95;
 }
 
 /* Top nav */
@@ -330,84 +102,11 @@ section h3::after {
   opacity: 0.76;
 }
 
-/* Price list styling */
-.price-list {
-  margin-top: 14px;
-  padding-top: 12px;
-  border-top: 1px solid #1a1a1a;
-}
-
-.price-list p {
-  margin: 6px 0;
-  color: var(--muted);
-}
-
-.price-list strong {
-  color: var(--text);
-}
-
-/* Before-you-apply styling */
-.fit-section {
-  margin-top: 40px;
-  }
-    .services-hero {
-  padding-top: 28px;
-  margin-bottom: 28px;
-}
-
-.services-hero h1 {
-  font-size: clamp(2rem, 5vw, 3.4rem);
-  margin-bottom: 12px;
-}
-
-.services-hero .subtext {
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-section {
-  margin-top: 42px;
-}
-
-section h3::after {
-  content: "";
-  display: block;
-  width: 64px;
-  height: 3px;
-  margin: 10px auto 0;
-  background: #b31217;
-  border-radius: 999px;
-}
-
-.price-list {
-  margin-top: 14px;
-  padding-top: 12px;
-  border-top: 1px solid #1a1a1a;
-}
-
-.price-list p {
-  margin: 6px 0;
-  color: #bdbdbd;
-}
-
-.fit-section {
-  margin-top: 48px;
-
-/* ===== Services page spacing fix ===== */
-body.has-top-nav {
-  padding-top: 96px;
-}
-
-main.page {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px 18px 100px;
-}
-
+/* Hero / page intro */
 .services-hero {
   padding-top: 30px;
-  padding-bottom: 18px;
-  margin-bottom: 30px;
+  padding-bottom: 16px;
+  margin-bottom: 28px;
 }
 
 .services-hero h1 {
@@ -421,15 +120,41 @@ main.page {
   margin: 0 auto;
 }
 
-section {
-  margin-top: 56px;
+/* Buttons */
+.cta-button,
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
 }
 
-section:first-of-type {
-  margin-top: 18px;
+.cta-button {
+  margin-top: 26px;
+  padding: 16px 32px;
+  letter-spacing: 1px;
 }
 
+.cta-button:hover,
+.btn:hover {
+  transform: translateY(-2px);
+  background: #981015;
+  opacity: 0.98;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #333;
+}
+
+/* Section headings */
 section h3 {
+  color: var(--text);
   margin-bottom: 14px;
 }
 
@@ -439,16 +164,25 @@ section h3::after {
   width: 64px;
   height: 3px;
   margin: 10px auto 0;
-  background: #b31217;
+  background: var(--accent);
   border-radius: 999px;
 }
 
+/* Cards */
 .card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
   margin-top: 22px;
 }
 
 .card {
+  text-align: left;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
   padding: 22px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.24);
 }
 
 .card h4 {
@@ -461,6 +195,29 @@ section h3::after {
   line-height: 1.55;
 }
 
+.card ul {
+  margin: 10px 0 0 18px;
+  padding: 0;
+}
+
+.card li {
+  margin: 6px 0;
+}
+
+.label {
+  display: inline-block;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(179, 18, 23, 0.24);
+  background: var(--accent-soft);
+}
+
+/* Price blocks */
 .price-list {
   margin-top: 16px;
   padding-top: 14px;
@@ -469,10 +226,16 @@ section h3::after {
 
 .price-list p {
   margin: 7px 0;
+  color: var(--muted);
 }
 
+.price-list strong {
+  color: var(--text);
+}
+
+/* Before you apply */
 .fit-section {
-  margin-top: 22px;
+  margin-top: 24px;
   margin-bottom: 8px;
 }
 
@@ -480,12 +243,47 @@ section h3::after {
   max-width: 760px;
 }
 
+/* Success pages */
+.success-page {
+  padding-top: 40px;
+}
+
+.success-page h1 {
+  margin-top: 20px;
+}
+
+.success-page h2,
+.success-page h3 {
+  margin-top: 24px;
+}
+
+/* Responsive */
+@media (max-width: 920px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 520px) {
   body.has-top-nav {
-    padding-top: 82px;
+    padding-top: 0;
   }
 
-  main.page {
+  .top-nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    justify-content: space-around;
+  }
+
+  .nav-link {
+    font-size: 0.82rem;
+    padding: 7px 8px;
+  }
+
+  .page {
     padding: 18px 14px 90px;
   }
 
@@ -501,23 +299,8 @@ section h3::after {
   .card {
     padding: 18px;
   }
-.label {
-  background: rgba(179, 18, 23, 0.12);
-  border: 1px solid rgba(179, 18, 23, 0.24);
-  color: #f5f5f5;
-}
 
-.btn {
-  background: #b31217;
-  border: 1px solid transparent;
+  .success-page {
+    padding-top: 56px;
+  }
 }
-
-.btn:hover {
-  background: #981015;
-}
-
-.btn-outline {
-  background: transparent;
-  border: 1px solid #333;
-}
-
