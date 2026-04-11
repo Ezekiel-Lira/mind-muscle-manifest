@@ -534,5 +534,28 @@ section h3::after {
 
   .price-list p {
     font-size: 0.98rem;
+  @media (max-width: 640px) {
+  .page {
+    padding: 20px 12px 90px;
+  }
+
+  .services-hero h1 {
+    font-size: 2.1rem;
+    line-height: 1.08;
+  }
+
+  .services-hero .subtext {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card {
+    width: 100%;
+    box-sizing: border-box;
   }
 }
