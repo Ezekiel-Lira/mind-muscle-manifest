@@ -372,5 +372,29 @@ section h3::after {
 
   .success-page {
     padding-top: 56px;
+  @media (max-width: 640px) {
+  .top-nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0;
+    justify-content: space-around;
+    padding: 8px 6px;
+    margin: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .site-logo {
+    max-width: 120px;
+    margin-top: 28px;
+    margin-bottom: 24px;
+  }
+
+  header {
+    padding-top: 12px;
   }
 }
