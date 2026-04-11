@@ -416,8 +416,9 @@ section h3::after {
   .cta-group .btn-outline,
   .cta-group .cta-button {
     min-width: 180px;
-  /* FAQ accordion */
-.faq-list {
+  }
+  
+  .faq-list {
   max-width: 720px;
   margin: 24px auto 0;
   text-align: left;
@@ -467,6 +468,7 @@ section h3::after {
 .faq-item.open .faq-answer {
   display: block;
 }
+
 /* Services mobile layout improvement */
 @media (max-width: 640px) {
   .page {
