@@ -118,7 +118,7 @@
         </div>
       </div>
     </section>
-            <section id="faq">
+<section id="faq">
   <h3>FAQ</h3>
   <p class="subtext">
     Read this before you message me. If you’re serious, most of what you need to know is already here.
@@ -206,8 +206,8 @@
   <footer>
     &copy; <span id="year"></span> Mind Muscle Manifest. All rights reserved.
   </footer>
-
-    <<script>
+    
+      <script>
   document.querySelectorAll('.faq-question').forEach(function (btn) {
     btn.addEventListener('click', function () {
       const item = btn.parentElement;
@@ -222,7 +222,13 @@
       }
     });
   });
+
+  const yearEl = document.getElementById('year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 </script>
+  
 </body>
 </html>
 </body>
