@@ -557,5 +557,48 @@ section h3::after {
   .card {
     width: 100%;
     box-sizing: border-box;
+  @media (max-width: 640px) {
+  .page {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 14px 90px;
+    box-sizing: border-box;
+  }
+
+  .services-hero {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 20px;
+    margin-bottom: 24px;
+  }
+
+  .services-hero h1 {
+    font-size: 2rem;
+    line-height: 1.08;
+  }
+
+  .services-hero .subtext {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 18px;
+  }
+
+  .card p,
+  .card li {
+    font-size: 0.98rem;
   }
 }
