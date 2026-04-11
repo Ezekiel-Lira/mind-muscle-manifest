@@ -501,7 +501,16 @@ section h3::after {
   .card p,
   .card li {
     font-size: 0.98rem;
+  @media (max-width: 640px) {
+  header {
+    padding-top: 18px;
   }
+
+  .site-logo {
+    margin-top: 20px;
+    margin-bottom: 26px;
+  }
+}
 
   .price-list p {
     font-size: 0.98rem;
