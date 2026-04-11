@@ -24,9 +24,11 @@ body.has-top-nav {
 }
 
 .page {
+  width: 100%;
   max-width: 1100px;
   margin: 0 auto;
   padding: 24px 18px 100px;
+  box-sizing: border-box;
 }
 
 h1,
@@ -59,7 +61,7 @@ section:first-of-type {
 .site-logo {
   display: block;
   max-width: 140px;
-  margin: 0 auto 24px auto;
+  margin: 24px auto 24px auto;
   opacity: 0.95;
 }
 
@@ -101,24 +103,11 @@ section:first-of-type {
   opacity: 0.76;
 }
 
-/* HERO / PAGE INTRO */
-.services-hero {
-  padding-top: 34px;
-  padding-bottom: 12px;
-  margin-bottom: 28px;
+/* HERO */
+header {
+  padding: 18px 18px 30px;
 }
 
-.services-hero h1 {
-  font-size: clamp(2.2rem, 5vw, 3.6rem);
-  margin-bottom: 14px;
-  line-height: 1.05;
-}
-
-.services-hero .subtext {
-  max-width: 760px;
-}
-
-/* BUTTONS */
 .cta-button,
 .btn {
   display: inline-block;
@@ -148,6 +137,14 @@ section:first-of-type {
 .btn-outline {
   background: transparent;
   border: 1px solid #333;
+}
+
+.cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 30px;
 }
 
 /* HEADINGS */
@@ -227,102 +224,83 @@ section h3::after {
   color: var(--muted);
 }
 
-.price-list strong {
+/* FAQ */
+.faq-list {
+  max-width: 720px;
+  margin: 24px auto 0;
+  text-align: left;
+}
+
+.faq-item {
+  margin-bottom: 12px;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 14px 18px;
+  background: #f1f1f1;
+  color: #111;
+  border: none;
+  border-radius: 999px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.faq-question span:first-child {
+  flex: 1;
+  padding-right: 12px;
+}
+
+.faq-icon {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.faq-answer {
+  display: none;
+  padding: 14px 12px 4px;
   color: var(--text);
+  text-align: center;
+  line-height: 1.6;
 }
 
-/* BEFORE YOU APPLY */
-.fit-section {
-  margin-top: 24px;
-  margin-bottom: 8px;
+.faq-answer p {
+  margin: 8px 0;
 }
 
-.fit-section .subtext {
-  max-width: 760px;
+.faq-item.open .faq-answer {
+  display: block;
 }
 
-/* SUCCESS PAGES */
-.success-page {
-  padding-top: 40px;
+/* FOOTER */
+footer {
+  padding: 24px 18px 40px;
+  color: var(--muted);
 }
 
-.success-page h1 {
-  margin-top: 20px;
+/* SERVICES PAGE */
+.services-hero {
+  padding-top: 20px;
+  margin-bottom: 24px;
 }
 
-.success-page h2,
-.success-page h3 {
-  margin-top: 24px;
+.services-hero h1 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.08;
 }
 
-/* TABLET */
+/* MOBILE */
 @media (max-width: 920px) {
   .card-grid {
     grid-template-columns: 1fr;
   }
 }
 
-/* MOBILE */
 @media (max-width: 640px) {
-  body.has-top-nav {
-    padding-top: 0;
-  }
-
-  .top-nav {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    box-sizing: border-box;
-    border-radius: 0;
-    justify-content: space-around;
-    padding: 10px 8px;
-    margin: 0;
-  }
-
-  .nav-link {
-    font-size: 0.84rem;
-    padding: 8px 6px;
-  }
-
-  .page {
-    padding: 18px 14px 90px;
-  }
-
-  .site-logo {
-    max-width: 120px;
-    margin-top: 12px;
-    margin-bottom: 20px;
-  }
-
-  .services-hero {
-    padding-top: 22px;
-    margin-bottom: 22px;
-  }
-
-  section {
-    margin-top: 42px;
-  }
-
-  .card {
-    padding: 18px;
-  }
-
-  .success-page {
-    padding-top: 56px;
-  /* Mobile spacing between nav and hero/logo */
-@media (max-width: 640px) {
-  .hero-logo-wrap,
-  .hero-content,
-  header {
-    margin-top: 18px;
-  }
-
-  .site-logo {
-    margin-top: 18px;
-    margin-bottom: 24px;
-  @media (max-width: 640px) {
   body.has-top-nav {
     padding-top: 0;
   }
@@ -348,44 +326,8 @@ section h3::after {
   }
 
   .page {
-    padding: 18px 14px 90px;
-  }
-
-  .site-logo {
-    max-width: 120px;
-    margin-top: 18px;
-    margin-bottom: 24px;
-  }
-
-  .services-hero {
-    padding-top: 22px;
-    margin-bottom: 22px;
-  }
-
-  section {
-    margin-top: 42px;
-  }
-
-  .card {
-    padding: 18px;
-  }
-
-  .success-page {
-    padding-top: 56px;
-  @media (max-width: 640px) {
-  .top-nav {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    box-sizing: border-box;
-    border-radius: 0;
-    justify-content: space-around;
-    padding: 8px 6px;
-    margin: 0;
-    border-left: none;
-    border-right: none;
+    max-width: 100%;
+    padding: 20px 14px 90px;
   }
 
   .site-logo {
@@ -395,129 +337,9 @@ section h3::after {
   }
 
   header {
-    padding-top: 12px;
-  /* Homepage CTA spacing */
-.cta-group {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 14px;
-  margin-top: 28px;
-}
-
-@media (max-width: 640px) {
-  .cta-group {
-    gap: 16px;
-    margin-top: 32px;
-    margin-bottom: 10px;
-  }
-
-  .cta-group .btn,
-  .cta-group .btn-outline,
-  .cta-group .cta-button {
-    min-width: 180px;
-  }
-  
-  .faq-list {
-  max-width: 720px;
-  margin: 24px auto 0;
-  text-align: left;
-}
-
-.faq-item {
-  margin-bottom: 12px;
-}
-
-.faq-question {
-  width: 100%;
-  padding: 14px 18px;
-  background: #f1f1f1;
-  color: #111;
-  border: none;
-  border-radius: 999px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: left;
-  font-size: 0.95rem;
-  cursor: pointer;
-}
-
-.faq-question span:first-child {
-  flex: 1;
-  padding-right: 12px;
-}
-
-.faq-icon {
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-.faq-answer {
-  display: none;
-  padding: 14px 12px 4px;
-  color: #f5f5f5;
-  text-align: center;
-  line-height: 1.6;
-}
-
-.faq-answer p {
-  margin: 8px 0;
-}
-
-.faq-item.open .faq-answer {
-  display: block;
-}
-
-/* Services mobile layout improvement */
-@media (max-width: 640px) {
-  .page {
-    max-width: 100%;
-    padding: 20px 12px 90px;
-  }
-
-  .services-hero h1 {
-    font-size: 2rem;
-    line-height: 1.1;
-  }
-
-  .services-hero .subtext {
-    max-width: 100%;
-    font-size: 1rem;
-  }
-
-  .card-grid {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-
-  .card {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 18px;
-  }
-
-  .card p,
-  .card li {
-    font-size: 0.98rem;
-  @media (max-width: 640px) {
-  header {
     padding-top: 18px;
   }
 
-  .site-logo {
-    margin-top: 20px;
-    margin-bottom: 26px;
-  /* Hero CTA spacing */
-.cta-group {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 30px;
-}
-
-@media (max-width: 640px) {
   .cta-group {
     flex-direction: column;
     align-items: center;
@@ -533,61 +355,8 @@ section h3::after {
     text-align: center;
   }
 
-  .price-list p {
-    font-size: 0.98rem;
-  @media (max-width: 640px) {
-  .page {
-    padding: 20px 12px 90px;
-  }
-
-  .services-hero h1 {
-    font-size: 2.1rem;
-    line-height: 1.08;
-  }
-
-  .services-hero .subtext {
-    font-size: 1rem;
-    max-width: 100%;
-  }
-
-  .card-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .card {
-    width: 100%;
-    box-sizing: border-box;
-  @media (max-width: 640px) {
-  .page {
-    width: 100%;
-    max-width: 100%;
-    padding: 20px 14px 90px;
-    box-sizing: border-box;
-  }
-
-  .services-hero {
-    width: 100%;
-    max-width: 100%;
-    padding-top: 20px;
-    margin-bottom: 24px;
-  }
-
-  .services-hero h1 {
-    font-size: 2rem;
-    line-height: 1.08;
-  }
-
-  .services-hero .subtext {
-    max-width: 100%;
-    font-size: 1rem;
-  }
-
-  .card-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-    width: 100%;
+  section {
+    margin-top: 42px;
   }
 
   .card {
@@ -598,73 +367,8 @@ section h3::after {
     padding: 18px;
   }
 
-  .card p,
-  .card li {
-    font-size: 0.98rem;
+  .services-hero .subtext {
+    max-width: 100%;
+    font-size: 1rem;
   }
-    
-  @media (max-width: 640px) {
-  .cta-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    margin-top: 34px;
-    margin-bottom: 14px;
-  }
-
-  .cta-group .btn,
-  .cta-group .btn-outline,
-  .cta-group .cta-button {
-    width: min(280px, 88vw);
-    text-align: center;
-  .faq-list {
-  max-width: 720px;
-  margin: 24px auto 0;
-  text-align: left;
-}
-
-.faq-item {
-  margin-bottom: 12px;
-}
-
-.faq-question {
-  width: 100%;
-  padding: 14px 18px;
-  background: #f1f1f1;
-  color: #111;
-  border: none;
-  border-radius: 999px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: left;
-  font-size: 0.95rem;
-  cursor: pointer;
-}
-
-.faq-question span:first-child {
-  flex: 1;
-  padding-right: 12px;
-}
-
-.faq-icon {
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-.faq-answer {
-  display: none;
-  padding: 14px 12px 4px;
-  color: #f5f5f5;
-  text-align: center;
-  line-height: 1.6;
-}
-
-.faq-answer p {
-  margin: 8px 0;
-}
-
-.faq-item.open .faq-answer {
-  display: block;
 }
