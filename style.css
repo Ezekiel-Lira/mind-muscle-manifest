@@ -371,4 +371,32 @@ footer {
     max-width: 100%;
     font-size: 1rem;
   }
+.testimonial-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 22px 4px 12px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.testimonial-card {
+  min-width: 82%;
+  max-width: 360px;
+  scroll-snap-align: center;
+  text-align: left;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  padding: 22px;
+}
+
+@media (min-width: 800px) {
+  .testimonial-card {
+    min-width: 320px;
+  }
+
+  .testimonial-scroll {
+    justify-content: center;
+  }
 }
