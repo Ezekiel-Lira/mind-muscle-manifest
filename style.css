@@ -431,6 +431,49 @@ footer {
   margin-bottom: 16px;
   border: 1px solid #222;
 }
+/* About accordion */
+.about-accordion {
+  align-items: start;
+}
+
+.about-item {
+  padding: 0;
+  overflow: hidden;
+}
+
+.about-question {
+  width: 100%;
+  padding: 18px;
+  background: transparent;
+  color: var(--text);
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.about-answer {
+  display: none;
+  padding: 0 18px 18px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.about-answer p {
+  margin: 10px 0;
+}
+
+.about-item.open .about-answer {
+  display: block;
+}
+
+.about-item.open .faq-icon {
+  transform: rotate(45deg);
+}
 
 .image-card p {
   margin-bottom: 10px;
