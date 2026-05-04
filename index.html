@@ -271,6 +271,21 @@
     });
   });
 
+  document.querySelectorAll('.about-question').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+
+      document.querySelectorAll('.about-item').forEach(function (el) {
+        el.classList.remove('open');
+      });
+
+      if (!isOpen) {
+        item.classList.add('open');
+      }
+    });
+  });
+
   const yearEl = document.getElementById('year');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
