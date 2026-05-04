@@ -406,5 +406,34 @@ footer {
 
   #testimonials .testimonial-card {
     flex: 0 0 300px;
-  }
+.about-extended {
+  max-width: 850px;
+  margin: 42px auto 0;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  text-align: center;
+}
+
+.about-extended p {
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 14px auto;
+  max-width: 760px;
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #222;
+}
+
+.image-card p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
 }
