@@ -478,3 +478,70 @@ footer {
   margin: 14px auto;
   max-width: 760px;
 }
+/* Landing page */
+.landing-page {
+  padding-top: 0;
+}
+
+.landing-wrap {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 18px 90px;
+  box-sizing: border-box;
+}
+
+.landing-hero {
+  min-height: 78vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.landing-hero h1 {
+  max-width: 850px;
+  font-size: clamp(2.5rem, 6vw, 4.4rem);
+  line-height: 1.02;
+  margin: 16px auto 14px;
+}
+
+.landing-trust,
+.landing-process,
+.landing-final {
+  margin-top: 56px;
+}
+
+.featured-card {
+  border-color: rgba(179, 18, 23, 0.55);
+  box-shadow: 0 0 28px rgba(179, 18, 23, 0.12);
+}
+
+.landing-plans .card {
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-plans .cta-group {
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+@media (max-width: 640px) {
+  .landing-wrap {
+    padding: 22px 14px 80px;
+  }
+
+  .landing-hero {
+    min-height: 72vh;
+  }
+
+  .landing-hero h1 {
+    font-size: 2.55rem;
+  }
+
+  .landing-plans .card {
+    min-height: auto;
+  }
+}
